@@ -6,12 +6,23 @@
       {{ product.name }}
     </a>
   </h3>
+
+  <!-- ngIf direktyvos panaudojimas, paslepti aprasyma
+  jei aprasymo ilgis yra maziau uz 20, else dalyje nurodomas
+  ng-template elementas, kuris bus atvaizduojamas jei salyga netenkinama -->
   <p *ngIf="product.description.length > 20; else noDescription">
     Description: {{ product.description }}
   </p>
+
   <ng-template #noDescription>
     <p>Nera aprasymo</p>
   </ng-template>
+
+  <button (click)="share()">
+    <i class="material-icons text-white">share</i>
+    Share to Facebook
+  </button>
+  <!-- TODO: Galima sukurti share to twitter mygtuka -->
 </div>
 
 <!-- 
