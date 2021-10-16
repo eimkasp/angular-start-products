@@ -6,6 +6,12 @@
       {{ product.name }}
     </a>
   </h3>
+  <p *ngIf="product.description.length > 20; else noDescription">
+    Description: {{ product.description }}
+  </p>
+  <ng-template #noDescription>
+    <p>Nera aprasymo</p>
+  </ng-template>
 </div>
 
 <!-- 

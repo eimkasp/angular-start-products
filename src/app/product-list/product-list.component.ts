@@ -11,6 +11,10 @@ export class ProductListComponent {
   products = products;
 
   share() {
+    if(products[0].description.length > 10) {
+      
+    }
+
     window.alert('The product has been shared!');
   }
 }
