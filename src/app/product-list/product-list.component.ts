@@ -19,15 +19,20 @@ export class ProductListComponent {
     // https://developers.facebook.com/docs/sharing/reference/share-dialog/
     let url =
       'https://facebook.com/sharer.php?display=popup&u=' + window.location.href;
+
+
+    /**
+     * Window open dokumentacija: 
+        https://developer.mozilla.org/en-US/docs/Web/API/Window/open
+     *
+    */
     window.open(url, 'sharer');
   }
 
   shareTwitter() {
-    window.alert("TODO: Padaryti twitter sharinima");
+    window.alert('TODO: Padaryti twitter sharinima');
   }
 }
-
-
 
 /*
 Copyright Google LLC. All Rights Reserved.
